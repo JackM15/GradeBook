@@ -12,6 +12,16 @@ namespace Grades.Tests.Types
     {
 
         [TestMethod]
+        public void StringComparisons()
+        {
+            string name1 = "Jack";
+            string name2 = "jack";
+
+            bool result = string.Equals(name1, name2, StringComparison.InvariantCultureIgnoreCase);
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
         public void IntVariablesHoldAValue()
         {
             int x1 = 100;
