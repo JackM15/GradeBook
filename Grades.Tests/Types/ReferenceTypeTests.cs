@@ -10,6 +10,25 @@ namespace Grades.Tests.Types
     [TestClass]
     public class TypeTests
     {
+
+        [TestMethod]
+        public void UppercaseString()
+        {
+            string name = "jack";
+            name.ToUpper(); //creates new string so doesnt change original
+
+            Assert.AreNotEqual("JACK", name); 
+        }
+
+        [TestMethod]
+        public void AddDaysToDateTime()
+        {
+            DateTime date = new DateTime(2017, 12, 1);
+            date = date.AddDays(1); //create new object and assign it to date so test passes.
+
+            Assert.AreEqual(2, date.Day); 
+        }
+
         [TestMethod]
         public void ValueTypesPassByValue()
         {
