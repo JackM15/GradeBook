@@ -7,12 +7,23 @@ using System.Threading.Tasks;
 
 namespace Grades.Tests.Types
 {
-    //Proof of reference types
     [TestClass]
     public class ReferenceTypeTests
     {
+
         [TestMethod]
-        public void VariablesHoldAReference()
+        public void IntVariablesHoldAValue()
+        {
+            int x1 = 100;
+            int x2 = x1;
+
+            x1 = 4;
+            Assert.AreNotEqual(x1, x2);
+
+        }
+
+        [TestMethod]
+        public void GradeBookVariablesHoldAReference()
         {
             GradeBook g1 = new GradeBook();
             GradeBook g2 = g1;
